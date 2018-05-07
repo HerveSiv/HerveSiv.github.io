@@ -1,46 +1,4 @@
 
-<?php
-
-if ( isset($_POST['btn-signup']) ) {
-
-				$subject = "Your Account Credential ";
-				$to = $_POST['email'];
-				$from =  "info@onlinelacolombieregisto.com";
-				
-				
-				//data
-				$emess = "Your Name: ".$name."\r\n";
-			       
-			        $emess.= "Your Email: ".$email."\r\n";
-			
-			        $emess.= "Your Password: ".$pass."\r\n";    
-			        
-			        $emess.= "Requested Class: ".$classrequested."\r\n";   
-			        
-			        $emess.= "Link: http://onlinelacolombieregisto.com" ."\r\n";
-			        
-			        $emess.= "Date Registered:".$joining_date."\r\n";
-			        
-			        $emess.= "NB: This email address and password is valid ONLY for 1 day. After that duration it will be deleted.";
-				
-				//Headers
-				$headers  = "MIME-Version: 1.0\r\n";
-				//$headers .= "Content-type: text/html; charset=UTF-8\r\n";
-				
-				$headers .= "From: La Colombiere School <".$from."> ";
-				
-				mail($to,$subject,$emess,$headers);
-				
-				//unset($name);
-				//nset($email);
-				//unset($pass);
-				//unset($classrequested);
-				//unset($stfirstname);
-				//unset($stlastname);
-
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -362,7 +320,7 @@ if ( isset($_POST['btn-signup']) ) {
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <form id="contactForm" name="sentMessage" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off"novalidate>
+            <form id="contactForm" name="sentMessage" novalidate>
               <div class="row">
                 <div class="col-md-6"> 
                   <div class="form-group">
